@@ -1,0 +1,184 @@
+
+<html>
+    <head>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+            <link rel="icon" href="https://i.imgur.com/GFtRn4Y.png" type="image/png" sizes="16x16">
+            <link rel="icon" href="https://i.imgur.com/GFtRn4Y.png" type="image/png" sizes="32x32">
+            <link rel="icon" href="https://i.imgur.com/GFtRn4Y.png" type="image/png" sizes="64x64">
+            <link rel="icon" href="https://i.imgur.com/GFtRn4Y.png" type="image/png" sizes="128x128">
+            <link rel="icon" href="https://i.imgur.com/GFtRn4Y.png" type="image/png" sizes="256x256">
+            <meta property="og:image" content="https://i.imgur.com/GFtRn4Y.png" />
+            <meta content="DevMegle" property="og:title">
+            <meta content="Szukałeś miejsca dla programistów do pogadania? Lepiej nie mogłeś trafić, DevMegle to serwis" property="og:description">
+            <meta content="#5500d3" data-react-helmet="true" name="theme-color">
+            <style>
+                body {
+                    font-family: 'Fira Sans', sans-serif !important; 
+                    text-align: center;
+                    background-color: #222831 !important;
+                    color: white !important;
+                }
+                .con{
+                    color: white !important;
+                    margin-top: 17%;
+                }
+                .btnn {
+                    color: white !important;
+                    background-color: rgb(98, 0, 255);
+                    border: none;
+                    padding: 5px 15px;
+                    border-radius: 12px;
+                    transition: 0.2s all ease-in-out; 
+                }
+                .btnn:hover {
+                    background-color: rgb(85, 0, 221);
+                    -webkit-box-shadow: 0px 0px 43px -10px #5500DD; 
+                    box-shadow: 0px 0px 43px -10px #5500DD;
+                }
+                .modal {
+                    color: rgb(0, 0, 0);
+                    text-align: left;
+                }
+                .version {
+                    position: absolute;
+                    bottom: 0%;
+                    font-size: 19px;
+                    margin-left: 10px;
+                    margin-bottom: 5px;
+                    font-weight: 100;
+                }
+                a {
+                    color: rgb(15, 139, 255) !important;
+                    text-decoration: none !important;
+                }
+                a:hover {
+                    color: rgb(109, 109, 240);
+                    text-decoration: none !important;
+                }
+                nav {
+                    top: 0;
+                    text-align: center;
+                    background-color: rgb(255, 105, 86);
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
+            </style>
+            <title>DevMegle - Home</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <nav id="errorsAccept">
+        </nav>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Przejdź dalej...</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                    Nazwa Użytkownika<br>
+                    <input type="text" name="username" id="usernameInput" autocomplete="off" class="form-control"><br>
+                    Zdjęcie profilowe ( Zdjęcie tylko z <a target="_blank" href="https://imgur.com/">Imgur</a> ) <br>
+                    <input type="text" name="avatarURL" id="avatarURLInput" autocomplete="off" class="form-control"><br>
+                    Przechodząc dalej akceptujesz <a href="" target="_blank">politykę prywatonści</a> oraz <a href="http://" target="_blank">regulamin</a> serwisu DevMegle
+             </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+            <a>
+                <button type="submit" onclick="checkInputs()" class="btn btn-primary" data-bs-dismiss="modal">Akceptuje i przechodze dalej</button>
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="con">
+        <img src="https://i.imgur.com/GFtRn4Y.png" width="128px">
+        <h1 style="font-weight: 900;">Serwis jest w czasie tworzenia</h1>
+        <span style="font-weight: 100;">Dopracowujemy serwis pod kątem zabezpieczeń, Narazię wrzucamy go jako beta<br>
+        totalna beta, <a href="/zglos">błędy zgłaszaj tutaj</a>. Aplikacja będzie działać na zasadzie pokoi<br>
+        bedziesz mógł rozmawiać z różnymi osobami z polski i wielu krajów!</span><br><br>
+        <button type="button" class="btnn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Wypróbuj Serwis
+          </button>
+        </div>
+        <div class="version">
+            <span>0.2v Beta</span>
+        </div>
+        <script>
+            var nickInput = document.getElementById('usernameInput')
+            var avatarInput = document.getElementById('avatarURLInput') 
+            var errorsInput = document.getElementById('errorsAccept') 
+
+            function checkInputs() {
+                if (!nickInput.value || nickInput.value == " ")
+                {
+                    document.getElementById('errorsAccept').innerHTML = `Nie podałeś nazwy użytkownika która chcesz posiadać w chacie`
+                    document.getElementById('errorsAccept').style.paddingBottom = "10px"
+                    document.getElementById('errorsAccept').style.paddingTop = "10px"
+                    setTimeout(function(){
+                        document.getElementById('errorsAccept').innerHTML = ``
+                        document.getElementById('errorsAccept').style.paddingBottom = "0px"
+                        document.getElementById('errorsAccept').style.paddingTop = "0px"
+                    }, 3000)
+                    return;
+                }
+                else if (nickInput.value.length > 24)
+                {
+                    document.getElementById('errorsAccept').innerHTML = `Nazwa użytkownika jest za długa. Maksymalnie 24 znaki!`
+                    document.getElementById('errorsAccept').style.paddingBottom = "10px"
+                    document.getElementById('errorsAccept').style.paddingTop = "10px"
+                    setTimeout(function(){
+                        document.getElementById('errorsAccept').innerHTML = ``
+                        document.getElementById('errorsAccept').style.paddingBottom = "0px"
+                        document.getElementById('errorsAccept').style.paddingTop = "0px"
+                    }, 3000)
+                    return;
+                }
+                else if (nickInput.value.length < 4) {
+                    document.getElementById('errorsAccept').innerHTML = `Nazwa użytkownika jest za krótka. Najmniej 4 znaki!`
+                    document.getElementById('errorsAccept').style.paddingBottom = "10px"
+                    document.getElementById('errorsAccept').style.paddingTop = "10px"
+                    setTimeout(function(){
+                        document.getElementById('errorsAccept').innerHTML = ``
+                        document.getElementById('errorsAccept').style.paddingBottom = "0px"
+                        document.getElementById('errorsAccept').style.paddingTop = "0px"
+                    }, 3000)
+                    return;
+                }
+                else if (!avatarInput.value.startsWith('https://i.imgur.com/'))
+                {
+                    document.getElementById('errorsAccept').innerHTML = `Link do avataru nie jest z strony Imgur przykład linku https://i.imgur.com/cWgejWZ.png`
+                    document.getElementById('errorsAccept').style.paddingBottom = "10px"
+                    document.getElementById('errorsAccept').style.paddingTop = "10px"
+                    setTimeout(function(){
+                        document.getElementById('errorsAccept').innerHTML = ``
+                        document.getElementById('errorsAccept').style.paddingBottom = "0px"
+                        document.getElementById('errorsAccept').style.paddingTop = "0px"
+                    }, 5000)
+                    return;
+                }
+                else if (avatarInput.value.endsWith('.png') || avatarInput.value.endsWith('.gif') || avatarInput.value.endsWith('.jpg') || avatarInput.value.endsWith('.jpeg')) 
+                {
+                    window.location.replace(location.href + 'chat?username=' + nickInput.value + '&avatarURL=' + avatarInput.value)
+                }
+                else {
+                    document.getElementById('errorsAccept').innerHTML = `Link do avataru nie kończy się z rozszerzeniem zdjęcia np. .png, .gif, .jpg przykład linku https://i.imgur.com/cWgejWZ.png`
+                    document.getElementById('errorsAccept').style.paddingBottom = "10px"
+                    document.getElementById('errorsAccept').style.paddingTop = "10px"
+                    setTimeout(function(){
+                        document.getElementById('errorsAccept').innerHTML = ``
+                        document.getElementById('errorsAccept').style.paddingBottom = "0px"
+                        document.getElementById('errorsAccept').style.paddingTop = "0px"
+                    }, 5000)
+                    return;
+                }
+            }
+        </script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
+</html>

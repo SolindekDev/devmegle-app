@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   res.render('index')
 });
 
-const domainLink = "http://localhost:3000/"
+const domainLink = "https://devmegle.herokuapp.com/"
 
 app.get('/chat', (req, res) => {
   res.render('chat', {user: req.query.username || "Użytkowniku", avatar: req.query.avatarURL || "https://i.imgur.com/GFtRn4Y.png", linkDomain: domainLink})

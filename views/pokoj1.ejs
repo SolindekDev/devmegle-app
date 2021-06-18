@@ -220,6 +220,32 @@
             err2.style.display = "none";
             if (InputLength < 1000)
             {
+              if (input.value.startsWith('!')) {
+                if (input.value === "!help" || input.value === "!pomoc") {
+                  setTimeout(function(){
+                      var myDate = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
+                      socket.emit('chat message', '<img class="avatarMessage" src="https://i.imgur.com/1UWx0LT.png" height="32px"> <user>' + 'Jade' + '</user>  <span class="badge badge-warning" style="background-color: white; color: black; ">BOT <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="black" class="bi bi-check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg></span> <minidate>' + myDate + '</minidate>' + '<br>' + 'Witaj! Jestem botem serwisu DevMegle, będę pomagał ci zrozumieć serwis oraz abym dodał ci troche zabawy poniżej podaje wszystkie komendy owego bota:<br><br><div class="code">!help - Pokazuje listę komend<br>!random - Pokazuje ci randomową liczbę<br>!markdown - Wysyła ci liste do zmieniania tekstu<br>!discord - Wysyła link do naszego discorda!</div>');
+                  }, 500)
+                }
+                if (input.value === "!discord") {
+                  setTimeout(function(){
+                      var myDate = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
+                      socket.emit('chat message', '<img class="avatarMessage" src="https://i.imgur.com/1UWx0LT.png" height="32px"> <user>' + 'Jade' + '</user>  <span class="badge badge-warning" style="background-color: white; color: black; ">BOT <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="black" class="bi bi-check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg></span> <minidate>' + myDate + '</minidate>' + '<br>' + 'Link do naszego discorda: <a href="https://pastebin.com/raw/FSPNvkAk" style="color: #4acfff;">Kliknij!</a>');
+                  }, 500)
+                }
+                if (input.value === "!markdown") {
+                  setTimeout(function(){
+                      var myDate = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
+                      socket.emit('chat message', '<img class="avatarMessage" src="https://i.imgur.com/1UWx0LT.png" height="32px"> <user>' + 'Jade' + '</user>  <span class="badge badge-warning" style="background-color: white; color: black; ">BOT <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="black" class="bi bi-check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg></span> <minidate>' + myDate + '</minidate>' + '<br>' + '<a href="https://pastebin.com/raw/FSPNvkAk" style="color: #4acfff;">Kliknij aby zobaczyć markdown naszego serwisu</a>');
+                  }, 500)
+                }
+                if (input.value === "!random") {
+                  setTimeout(function(){
+                      var myDate = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
+                      socket.emit('chat message', '<img class="avatarMessage" src="https://i.imgur.com/1UWx0LT.png" height="32px"> <user>' + 'Jade' + '</user>  <span class="badge badge-warning" style="background-color: white; color: black; ">BOT <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="black" class="bi bi-check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg></span> <minidate>' + myDate + '</minidate>' + '<br>' + 'Losowo wygenerowana liczba to: <strong>' + Math.round(Math.random() * 100) + '</strong>');
+                  }, 500)
+                }
+              }
               var myDate = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
               socket.emit('chat message', '<img class="avatarMessage" src="<%= avatar %>" height="32px"> <user>' + '<%= user %>' + '</user>  <span class="badge bg-warning text-dark"><%= dsadandawner34281dabsjajshda %></span> <minidate>' + myDate + '</minidate>' + '<br>' + input.value);
               input.value = '';
@@ -229,6 +255,10 @@
             }
           }
         });
+        setInterval(function() {
+          var myDate = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
+              socket.emit('chat message', '<img class="avatarMessage" src="https://i.imgur.com/1UWx0LT.png" height="32px"> <user>' + 'Jade' + '</user>  <span class="badge badge-warning" style="background-color: white; color: black; ">BOT <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="black" class="bi bi-check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg></span> <minidate>' + myDate + '</minidate>' + '<br>' + 'Nasz projekt jest open source! Możesz zobaczyć nasz kod pod linkiem: <a style="color: #4acfff;" href="https://github.com/SolindekDev/devmegle-app">Kliknij tutaj</a>');
+        }, 60000)
         socket.on('chat message', function(msg) {
           var comment = document.createComment('New message')
           var item = document.createElement('div');

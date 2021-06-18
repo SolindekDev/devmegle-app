@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   res.render('index')
 });
 
-const domainLink = "https://devmegle.herokuapp.com/"
+const domainLink = "http://localhost:3000/"
 
 app.get('/chat', (req, res) => {
   res.render('chat', {user: req.query.username || "Użytkowniku", avatar: req.query.avatarURL || "https://i.imgur.com/GFtRn4Y.png", linkDomain: domainLink})
@@ -36,16 +36,16 @@ app.get('*', function(req, res){
 
 io.on('connection', (socket) => {
   socket.on('chat message', msg => {
-    io.emit('chat message', msg.replace('**', '<strong>').replace('***', '</strong>').replace('^^(', '<i>').replace(')^^', '</i>').replace('`codes`', '<div class="code">').replace('`codee`', '</div>'));
+    io.emit('chat message', msg.replace('**', '<strong>').replace('***', '</strong>').replace('^^(', '<i>').replace(')^^', '</i>').replace('`codes`', '<div class="code">').replace('__{', '<span style="text-decoration: underline;">').replace('}__', '</span>').replace('`codee`', '</div>'));
   });
   socket.on('chat messagee', msg => {
-    io.emit('chat messagee', msg.replace('**', '<strong>').replace('***', '</strong>').replace('^^(', '<i>').replace(')^^', '</i>').replace('`codes`', '<div class="code">').replace('`codee`', '</div>'));
+    io.emit('chat messagee', msg.replace('**', '<strong>').replace('***', '</strong>').replace('^^(', '<i>').replace(')^^', '</i>').replace('`codes`', '<div class="code">').replace('__{', '<span style="text-decoration: underline;">').replace('}__', '</span>').replace('`codee`', '</div>'));
   });
   socket.on('chat messageee', msg => {
-    io.emit('chat messageee', msg.replace('**', '<strong>').replace('***', '</strong>').replace('^^(', '<i>').replace(')^^', '</i>').replace('`codes`', '<div class="code">').replace('`codee`', '</div>'));
+    io.emit('chat messageee', msg.replace('**', '<strong>').replace('***', '</strong>').replace('^^(', '<i>').replace(')^^', '</i>').replace('`codes`', '<div class="code">').replace('__{', '<span style="text-decoration: underline;">').replace('}__', '</span>').replace('`codee`', '</div>'));
   });
   socket.on('chat messageeee', msg => {
-    io.emit('chat messageeee', msg.replace('**', '<strong>').replace('***', '</strong>').replace('^^(', '<i>').replace(')^^', '</i>').replace('`codes`', '<div class="code">').replace('`codee`', '</div>'));
+    io.emit('chat messageeee', msg.replace('**', '<strong>').replace('***', '</strong>').replace('__{', '<span style="text-decoration: underline;">').replace('}__', '</span>').replace('^^(', '<i>').replace(')^^', '</i>').replace('`codes`', '<div class="code">').replace('`codee`', '</div>'));
   });
 });
 
